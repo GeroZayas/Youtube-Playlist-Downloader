@@ -6,7 +6,7 @@ from pytube import YouTube
 from pytube import Stream
 from tqdm import tqdm
 from rich import print
-from Get_Urls_YouTube_List import get_video_urls_from_playlist
+from Get_Urls_Youtube_List import get_video_urls_from_playlist
 
 # we import playsound to be use sound markers after some tasks are completed
 # or run
@@ -94,14 +94,12 @@ while running:
 # We create a counter to number the elements being downloaded
 counter = 0
 for link in list_of_links:
-
     print("[bold yellow]--[/bold yellow]" * 30)
 
     counter += 1
 
     # We check if the input link is valid, only true if it starts with 'https'
     if link[0:5] == "https":
-
         url = link
         yt = YouTube(url, on_progress_callback=progress_callback)
         stream = yt.streams.get_highest_resolution()
@@ -124,9 +122,7 @@ for link in list_of_links:
 
         # video = url.streams.get_highest_resolution()
 
-        path_to_download_folder = (
-            r"C:\Users\Gero Zayas\Downloads\Downloaded_from_YouTube"
-        )
+        path_to_download_folder = ("./DOWNLOADED_VIDEOS/")
 
         try:
             # video.download(path_to_download_folder)
