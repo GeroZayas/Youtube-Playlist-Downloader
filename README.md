@@ -1,5 +1,7 @@
 # Youtube-Playlist-Downloader
 
+The purpose of this program is to easily download full video playlists from Youtube (or just individual ones) from your terminal.
+
 ## Usage
 1. Go to youtube
 2. Copy the desired video playlist url link / or an individual video link
