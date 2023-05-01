@@ -101,7 +101,10 @@ for link in list_of_links:
     # We check if the input link is valid, only true if it starts with 'https'
     if link[0:5] == "https":
         url = link
-        yt = YouTube(url, on_progress_callback=progress_callback)
+        # Added -> use_oauth=True, allow_oauth_cache=True <- to make it work
+        # it forces the user to connect to a google account
+        # this is a temporary fix
+        yt = YouTube(url, on_progress_callback=progress_callback, use_oauth=True, allow_oauth_cache=True)
         stream = yt.streams.get_highest_resolution()
         print(f"[bold yellow]downloading....[/bold yellow] {counter} =>\n")
 
