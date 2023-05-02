@@ -74,15 +74,14 @@ while running:
 
         print()  # add a line break
 
-        if user_answer == "n" or user_answer == "N":
+        if user_answer in ["n", "N"]:
             break
-        elif user_answer == "y" or user_answer == "Y":
+        elif user_answer in ["y", "Y"]:
             continue
         else:
             print("WRONG INPUT\n")
             continue
 
-    # In case of PLAYLIST:
     elif user_answer_link_or_playlist == "2":
         a_playlist = input("Insert the playlist link: ")
         list_of_links = get_video_urls_from_playlist(a_playlist)
@@ -115,15 +114,10 @@ for link in list_of_links:
         # Here we want to know how big the file is and we let the user know
         video_size_bytes = stream.filesize
 
-        # video_size_bytes = url.streams.get_by_itag(17).filesize
 
-        # # we convert bytes to megabytes to make more readable
+        # we convert bytes to megabytes to make more readable
         video_size_mb = f"{video_size_bytes / 1048576:.2f} MB"
         print("[bold blue]This is the video's size ->[/bold blue]", video_size_mb, "\n")
-
-        # video_name = url.streams[0].title
-
-        # video = url.streams.get_highest_resolution()
 
         path_to_download_folder = ("./DOWNLOADED_VIDEOS/")
 
