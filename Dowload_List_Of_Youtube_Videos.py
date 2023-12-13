@@ -123,7 +123,7 @@ for link in list_of_links:
         video_size_mb = f"{video_size_bytes / 1048576:.2f} MB"
         print("[bold blue]This is the video's size ->[/bold blue]", video_size_mb, "\n")
 
-        path_to_download_folder = "./DOWNLOADED_VIDEOS/"
+        path_to_download_folder = "/home/gero/Videos/"
 
         try:
             # video.download(path_to_download_folder)
@@ -140,7 +140,7 @@ for link in list_of_links:
 
             try:
                 with open(
-                    f"{path_to_download_folder}\Downloaded Videos.txt", "a"
+                    f"{path_to_download_folder}Downloaded Videos.txt", "a"
                 ) as file:
                     file.write(
                         f"""
