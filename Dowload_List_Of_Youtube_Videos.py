@@ -50,12 +50,14 @@ list_of_links = []
 # we create a boolean value 'running' to set program to be running or not
 running = True
 
+print("If you want to add [bold red]Link by Link[/bold red] insert '1'")
+print()  # ADD SOME SPACE
+print("If you want to add a [bold red]Playlist[/bold red] link insert '2'")
+print()  # ADD SOME SPACE
+user_answer_link_or_playlist = input(">>> ")
+
+
 while running:
-    print("If you want to add [bold red]Link by Link[/bold red] insert '1'")
-    print()  # ADD SOME SPACE
-    print("If you want to add a [bold red]Playlist[/bold red] link insert '2'")
-    print()  # ADD SOME SPACE
-    user_answer_link_or_playlist = input(">>> ")
 
     # In case of LINK BY LINK:
     if user_answer_link_or_playlist == "1":
