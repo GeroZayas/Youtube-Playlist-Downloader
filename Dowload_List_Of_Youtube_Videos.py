@@ -10,7 +10,7 @@ from Get_Urls_Youtube_List import get_video_urls_from_playlist
 
 # we import playsound to be use sound markers after some tasks are completed
 # or run
-from playsound import playsound as play
+# from playsound import playsound as play
 
 # We import datetime to print the date of
 # downloaded videos later
